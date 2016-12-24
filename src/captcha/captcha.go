@@ -2,29 +2,30 @@ package captcha
 
 import (
 	"strconv"
-	"fmt"
+	"log"
 )
 
 func captcha(pattern, firstOperand, secondOperand, operator int) string {
 
-	var a = func() {
-		fmt.Println("a")
-	}
-	a()
-
-	if pattern == 1 {
-		return operandToText(firstOperand) + operatorToText(operator) + strconv.Itoa(secondOperand)
+	firstConvertedOperand := operand{
+		isText: pattern == 1,
+		operandInput: firstOperand,
 	}
 
-	return strconv.Itoa(firstOperand) + operatorToText(operator) + operandToText(secondOperand)
+	secondConvertedOperand := operand{
+		isText: pattern == 2,
+		operandInput: secondOperand,
+	}
+
+	return firstConvertedOperand.String() + operatorToText(operator) + secondConvertedOperand.String()
 }
 
 type operand struct {
-	patternInput, operandInput int
+	isText bool; operandInput int
 }
 
 func (o *operand) String() string {
-	if o.patternInput == 1 {
+	if o.isText == true {
 		return operandToText(o.operandInput)
 	}
 	return strconv.Itoa(o.operandInput)
@@ -49,6 +50,8 @@ func operandToText(operand int) string {
 		return v
 	}
 
+	log.Fatal("Value not found in operandToTextMap")
+
 	return "Error"
 }
 
@@ -64,6 +67,8 @@ func operatorToText(operand int) string {
 		return v
 
 	}
+
+	log.Fatal("Value not found in operatorToTextMap")
 
 	return "Error"
 }
