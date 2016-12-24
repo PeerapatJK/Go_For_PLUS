@@ -33,4 +33,16 @@ func main() {
 		fmt.Println(k,v)
 	}
 
+	fmt.Println("SwitchCase---")
+	a:= 1
+	switch a {
+	case 0:
+		fmt.Println(0)
+		fallthrough
+	case 1:
+		fmt.Println(1)
+	default:
+		fmt.Println("Not match")
+	}
+
 }
