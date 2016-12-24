@@ -1,8 +1,16 @@
 package captcha
 
-import "strconv"
+import (
+	"strconv"
+	"fmt"
+)
 
 func captcha(pattern, firstOperand, secondOperand, operator int) string {
+
+	var a = func() {
+		fmt.Println("a")
+	}
+	a()
 
 	if pattern == 1 {
 		return operandToText(firstOperand) + operatorToText(operator) + strconv.Itoa(secondOperand)
@@ -10,6 +18,8 @@ func captcha(pattern, firstOperand, secondOperand, operator int) string {
 
 	return strconv.Itoa(firstOperand) + operatorToText(operator) + operandToText(secondOperand)
 }
+
+var Captcha = captcha
 
 func operandToText(operand int) string {
 
@@ -28,7 +38,6 @@ func operandToText(operand int) string {
 
 	if v, ok := operandToTextMap[operand]; ok {
 		return v
-
 	}
 
 	return "Error"

@@ -37,6 +37,13 @@ func TestCaptcha_6MinusOne(t *testing.T) {
 	}
 }
 
+func TestCaptcha_5MultiplySix(t *testing.T) {
+	s := captcha(2, 5, 6, 3)
+	if s != "5*six" {
+		t.Error("we need 5*six but got : ", s)
+	}
+}
+
 func TestOperandToText_WhenGiven2_ShouldReturnTwo(t *testing.T) {
 	text := operandToText(2);
 	if text != "two" {
