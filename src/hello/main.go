@@ -1,13 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 const welcome = "Hello"
 
 func main() {
 	name := "P"
 	surname := "JK"
-	fmt.Println(sayHi(welcome, name, surname))
-	w, n := sayHi(welcome, name, surname)
-	println(w, n)
+	w, err := sayHi(welcome, name, surname)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(w)
 }

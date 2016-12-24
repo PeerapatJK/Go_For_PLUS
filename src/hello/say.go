@@ -3,6 +3,7 @@ package main
 import "errors"
 
 func sayHi(sl ...string) (string, error) {
+
 	if len(sl) < 3 {
 		return "", errors.New("We need at least 3 parameters")
 	}
