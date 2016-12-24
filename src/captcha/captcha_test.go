@@ -30,3 +30,17 @@ func TestOperandToText_WhenGiven9_ShouldReturnNine(t *testing.T) {
 	}
 }
 
+func TestOperatorToText_WhenGiven1_ShouldReturnPlus(t *testing.T) {
+	text := operatorToText(1);
+	if text != "+" {
+		t.Error("we need + but got : ", text)
+	}
+}
+
+func TestOperatorToText_WhenGiven3_ShouldReturnMultiply(t *testing.T) {
+	text := operatorToText(3);
+	if text != "*" {
+		t.Error("we need * but got : ", text)
+	}
+}
+

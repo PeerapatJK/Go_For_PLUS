@@ -2,14 +2,10 @@ package captcha
 
 func captcha(pattern, firstOperand, secondOperand, operator int) string {
 
-	if firstOperand == 1{
-		return "one+1"
-	}
-	return "two+1"
-
+	return operandToText(firstOperand) + "+1"
 }
 
-func operandToText(operand int) string  {
+func operandToText(operand int) string {
 
 	operandToTextMap := map[int]string{
 		0:"zero",
@@ -24,5 +20,26 @@ func operandToText(operand int) string  {
 		9:"nine",
 	}
 
-	return operandToTextMap[operand]
+	if v, ok := operandToTextMap[operand]; ok {
+		return v
+
+	}
+
+	return "Error"
+}
+
+func operatorToText(operand int) string {
+
+	operatorToTextMap := map[int]string{
+		1:"+",
+		2:"-",
+		3:"*",
+	}
+
+	if v, ok := operatorToTextMap[operand]; ok {
+		return v
+
+	}
+
+	return "Error"
 }
