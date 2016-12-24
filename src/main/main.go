@@ -30,12 +30,12 @@ func main() {
 	}
 
 	for k, v := range m {
-		fmt.Println(k,v)
+		fmt.Println(k, v)
 	}
 
 	fmt.Println("SwitchCase---")
-	a:= 1
-	switch a {
+	switchCaseTest := 1
+	switch switchCaseTest {
 	case 0:
 		fmt.Println(0)
 		fallthrough
@@ -45,4 +45,11 @@ func main() {
 		fmt.Println("Not match")
 	}
 
+	var a interface{}
+	a = "1"
+
+	fmt.Println(a.(string) + "D")
+
+	a = 1
+	fmt.Println(a)
 }
