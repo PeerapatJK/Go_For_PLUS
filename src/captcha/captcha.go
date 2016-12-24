@@ -3,6 +3,7 @@ package captcha
 import (
 	"strconv"
 	"log"
+	"fmt"
 )
 
 func captcha(pattern, firstOperand, secondOperand, operator int) string {
@@ -17,11 +18,18 @@ func captcha(pattern, firstOperand, secondOperand, operator int) string {
 		operandInput: secondOperand,
 	}
 
+	defer func() {
+		fmt.Println("End.")
+	}()
+
 	return firstConvertedOperand.String() + operatorToText(operator) + secondConvertedOperand.String()
 }
 
+var Captcha = captcha
+
 type operand struct {
-	isText bool; operandInput int
+	isText bool
+	operandInput int
 }
 
 func (o *operand) String() string {
