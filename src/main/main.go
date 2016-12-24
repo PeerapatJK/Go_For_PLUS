@@ -47,7 +47,6 @@ func main() {
 
 	fmt.Println("Interface---")
 
-
 	var a interface{}
 	a = "1"
 
@@ -64,18 +63,25 @@ func main() {
 		fmt.Println("any")
 	}
 
-	Echo(&acting{})
+	Echo(&acting{gender: "man"})
 }
 
 type sprinter interface {
 	String() string
 }
 
-func Echo(s sprinter){
+func Echo(s sprinter) {
 	fmt.Println(s.String())
 }
 
-type acting struct {}
-func (a *acting) String() string{
-	return "I am a aprinter man"
+type acting struct {
+	gender string
+}
+
+func (a *acting) String() string {
+	if a.gender == "men" {
+		return "I am a aprinter man"
+
+	}
+	return "I am a aprinter girl"
 }
