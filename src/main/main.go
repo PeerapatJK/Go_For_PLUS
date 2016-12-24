@@ -45,6 +45,9 @@ func main() {
 		fmt.Println("Not match")
 	}
 
+	fmt.Println("Interface---")
+
+
 	var a interface{}
 	a = "1"
 
@@ -52,4 +55,27 @@ func main() {
 
 	a = 1
 	fmt.Println(a)
+
+	switch a.(type) {
+	case string:{
+		fmt.Println("string")
+	}
+	default:
+		fmt.Println("any")
+	}
+
+	Echo(&acting{})
+}
+
+type sprinter interface {
+	String() string
+}
+
+func Echo(s sprinter){
+	fmt.Println(s.String())
+}
+
+type acting struct {}
+func (a *acting) String() string{
+	return "I am a aprinter man"
 }
