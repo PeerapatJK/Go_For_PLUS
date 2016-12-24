@@ -9,7 +9,8 @@ func main() {
 	var arr [5]int
 	fmt.Println(arr)
 
-	var sl []int
+	var sl = []int{1,2}
+	sl = append(sl,2)
 	fmt.Println(sl)
 
 	name := "P"
