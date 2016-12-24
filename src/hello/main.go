@@ -8,9 +8,9 @@ import (
 const welcome = "Hello"
 
 func main() {
-	name := "P"
-	surname := "JK"
-	w, err := sayHi(welcome, name, surname)
+	//name := "P"
+	//surname := "JK"
+	w, err := sayHi(welcome)
 	if err != nil {
 		log.Fatal(err)
 	}
