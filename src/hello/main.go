@@ -9,7 +9,7 @@ const welcome = "Hello"
 
 func main() {
 	//name := "P"
-	//surname := "JK"
+	//surname := "JKx"
 	w, err := sayHi(welcome)
 	if err != nil {
 		log.Fatal(err)
