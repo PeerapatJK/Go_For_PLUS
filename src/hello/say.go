@@ -1,5 +1,5 @@
 package main
 
-func sayHi() (string, string) {
-	return welcome, "Hi"
+func sayHi(name string) (string, string) {
+	return welcome, name
 }

@@ -5,7 +5,8 @@ import "fmt"
 const welcome = "Hello"
 
 func main() {
-	fmt.Println(sayHi())
-	w, n := sayHi()
+	name := "P"
+	fmt.Println(sayHi(name))
+	w, n := sayHi(name)
 	println(w, n)
 }
