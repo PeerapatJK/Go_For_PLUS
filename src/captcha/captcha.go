@@ -19,7 +19,16 @@ func captcha(pattern, firstOperand, secondOperand, operator int) string {
 	return strconv.Itoa(firstOperand) + operatorToText(operator) + operandToText(secondOperand)
 }
 
-var Captcha = captcha
+type operand struct {
+	patternInput, operandInput int
+}
+
+func (o *operand) String() string {
+	if o.patternInput == 1 {
+		return operandToText(o.operandInput)
+	}
+	return strconv.Itoa(o.operandInput)
+}
 
 func operandToText(operand int) string {
 
