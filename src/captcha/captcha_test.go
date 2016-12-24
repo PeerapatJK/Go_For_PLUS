@@ -16,6 +16,27 @@ func TestCaptcha_TwoPlus1(t *testing.T) {
 	}
 }
 
+func TestCaptcha_FourMultiply1(t *testing.T) {
+	s := captcha(1, 4, 1, 3)
+	if s != "four*1" {
+		t.Error("we need Four*1 but got : ", s)
+	}
+}
+
+func TestCaptcha_FourMultiply5(t *testing.T) {
+	s := captcha(1, 4, 5, 3)
+	if s != "four*5" {
+		t.Error("we need Four*5 but got : ", s)
+	}
+}
+
+func TestCaptcha_6MinusOne(t *testing.T) {
+	s := captcha(2, 6, 1, 2)
+	if s != "6-one" {
+		t.Error("we need 6-One but got : ", s)
+	}
+}
+
 func TestOperandToText_WhenGiven2_ShouldReturnTwo(t *testing.T) {
 	text := operandToText(2);
 	if text != "two" {

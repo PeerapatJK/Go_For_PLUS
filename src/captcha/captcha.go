@@ -1,8 +1,14 @@
 package captcha
 
+import "strconv"
+
 func captcha(pattern, firstOperand, secondOperand, operator int) string {
 
-	return operandToText(firstOperand) + "+1"
+	if pattern == 1 {
+		return operandToText(firstOperand) + operatorToText(operator) + strconv.Itoa(secondOperand)
+	}
+
+	return strconv.Itoa(firstOperand) + operatorToText(operator) + operandToText(secondOperand)
 }
 
 func operandToText(operand int) string {
