@@ -63,7 +63,7 @@ func main() {
 		fmt.Println("any")
 	}
 
-	Echo(&acting{gender: "man"})
+	Echo(&acting{gender: "men"})
 }
 
 type sprinter interface {
@@ -71,7 +71,7 @@ type sprinter interface {
 }
 
 func Echo(s sprinter) {
-	fmt.Println(s.String())
+	fmt.Println(s)
 }
 
 type acting struct {
@@ -80,8 +80,8 @@ type acting struct {
 
 func (a *acting) String() string {
 	if a.gender == "men" {
-		return "I am a aprinter man"
+		return "I am a sprinter man"
 
 	}
-	return "I am a aprinter girl"
+	return "I am a sprinter girl"
 }
