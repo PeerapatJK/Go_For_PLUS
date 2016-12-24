@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bc15eda-93c2-4018-bb2d-78f91ace4c34" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/captcha/captcha.go" afterPath="$PROJECT_DIR$/src/captcha/captcha.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/captcha/captcha_test.go" afterPath="$PROJECT_DIR$/src/captcha/captcha_test.go" />
     </list>
@@ -28,10 +27,10 @@
       <file leaf-file-name="captcha_test.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/captcha/captcha_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="0">
+              <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
               <folding>
-                <element signature="e#22#54#0" expanded="true" />
+                <element signature="e#17#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/captcha/captcha.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -79,8 +78,8 @@
         <option value="$PROJECT_DIR$/src/hello/say.go" />
         <option value="$PROJECT_DIR$/src/hello/main.go" />
         <option value="$PROJECT_DIR$/src/hello/say_test.go" />
-        <option value="$PROJECT_DIR$/src/captcha/captcha.go" />
         <option value="$PROJECT_DIR$/src/captcha/captcha_test.go" />
+        <option value="$PROJECT_DIR$/src/captcha/captcha.go" />
       </list>
     </option>
   </component>
@@ -738,12 +737,12 @@
       <option name="presentableId" value="Default" />
       <updated>1482548714329</updated>
       <workItem from="1482548717080" duration="19000" />
-      <workItem from="1482548737147" duration="4122000" />
+      <workItem from="1482548737147" duration="4254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4141000" />
+    <option name="totallyTimeSpent" value="4273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -838,17 +837,17 @@
     <entry file="file://$PROJECT_DIR$/src/captcha/captcha.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/captcha/captcha_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        <state relative-caret-position="0">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
           <folding>
-            <element signature="e#22#54#0" expanded="true" />
+            <element signature="e#17#33#0" expanded="true" />
           </folding>
         </state>
       </provider>
