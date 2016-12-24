@@ -19,10 +19,13 @@ func main() {
 
 	wg.Add(3)
 	go say("hello", 1)
+	// wg.Done()
 	go say("world", 2)
+	// wg.Done()
 	go func() {
 		time.Sleep(2000 * time.Millisecond)
 		fmt.Println("Hello World Start ----------------")
+		// wg.Done()
 	}()
 
 	wg.Wait()
